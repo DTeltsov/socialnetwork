@@ -5,7 +5,7 @@ I used [Simple_jwt](https://django-rest-framework-simplejwt.readthedocs.io/en/la
 And also i used PostgreSQL as db.
 ## Installing
 ### Dependencies
-Run in your terminal next commands 
+Run in your terminal next commands <br>
 <code>git clone https://github.com/DTeltsov/socialnetwork.git</code><br>
 <code>cd ./path/to/socialnetwork</code><br>
 <code>pip install -r /path/to/requirements.txt</code>
