@@ -28,8 +28,8 @@ In settings.py change all data to yours.<br>
         'PORT': '',
 
     }
-}</code>
-Then run 
+}</code><br>
+Then run <br>
 <code>python manage.py makemigrations</code><br>
 <code>python manage.py migrate</code>
 
