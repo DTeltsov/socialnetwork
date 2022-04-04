@@ -29,6 +29,9 @@ In settings.py change all data to yours.<br>
 
     }
 }</code>
+Then run 
+<code>python manage.py makemigrations</code><br>
+<code>python manage.py migrate</code>
 
 ### Run
 <code>python manage.py runserver</code>
