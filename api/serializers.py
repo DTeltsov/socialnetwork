@@ -1,4 +1,3 @@
-from attr import validate
 from rest_framework import serializers
 from django.contrib.auth.models import User
 
@@ -12,14 +11,15 @@ class UserSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = User
-        fields = ['id','username', 'first_name', 'last_name', 'password']
+        fields = ['id', 'username', 'first_name', 'last_name', 'password']
         extra_kwargs = {
-            'password': {'write_only':True}
+            'password': {'write_only': True}
         }
 
 
 class PostSerializer(serializers.HyperlinkedModelSerializer):
     count_likes = serializers.IntegerField(source='get_likes_count', required=False)
+
     class Meta:
         model = Post
         fields = ['id', 'url', 'text', 'pub_date', 'posted_by', 'count_likes']
@@ -34,8 +34,7 @@ class PostRateSerializer(serializers.HyperlinkedModelSerializer):
 
 class UserActivitySerializer(serializers.HyperlinkedModelSerializer):
     last_login = serializers.DateTimeField(source='get_last_login')
+    
     class Meta:
         model = UserActivity
         fields = '__all__'
-
-
